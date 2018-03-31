@@ -1,0 +1,5 @@
+Work out how to get rid of bullet points (ul tag) without fudge in line 36
+fix <a> tag css
+Add new pages to the href links in the header
+move bar to the right
+put header content into a fixed width box

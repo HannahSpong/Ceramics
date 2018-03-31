@@ -1,0 +1,73 @@
+//header.less//
+
+
+@import "../_core/_config.less";
+
+.header{
+  .container {
+    padding: 0px;
+  .headertitle {
+    height: 72px;
+  }
+
+  .headertitle1 {
+    font-family: @font-title-a;
+    font-size: 30px;
+    color: @alpha-color;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 5px;
+  }
+
+  .headertitle2 {
+    font-family: @font-title-b;
+    font-size: 25px;
+    color: @alpha-color;
+    height: 35px;
+    line-height: 10px;
+    margin-bottom: 5px;
+  }
+
+  .iconwrapper {
+    height: 40px;
+  }
+  .icons {
+    color: @alpha-color;
+    font-size: 20px;
+    padding: 2px;
+  }
+}
+}
+
+//responsive elements
+
+// applies to screens bigger than 768
+.header {
+  &.desktop {
+    border-bottom: solid @alpha-color 2px;
+    background-color: @background-color;
+    height:72px;
+    @media @xs, @xxs {
+      display: none;
+    }
+    @media @sm, @md, @lg, @xl {
+      display: block;
+    }
+  }
+}
+
+// applies to screens smaller than 769
+.header {
+  &.mobile {
+    height:auto;
+    @media @xs, @xxs {
+      display: block;
+    }
+    @media @sm, @md, @lg, @xl {
+      display: none;
+    }
+    .headertitle {
+
+    }
+  }
+}

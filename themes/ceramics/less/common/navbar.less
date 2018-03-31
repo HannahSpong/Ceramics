@@ -1,0 +1,103 @@
+//header.less//
+.show {
+  display:block;
+}
+
+@import "../_core/_config.less";
+
+.barwrapper {
+  height: 32px;
+  position: relative;
+
+  a {
+    &:link {
+      color: @link-color;
+      text-decoration: none;
+    }
+
+    &:visited {
+      color: @link-visited-color;
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: @beta-color;
+      text-decoration: none;
+      color: @font-color-a;
+    }
+
+    &:active {
+      color: @link-active-color;
+      text-decoration: none;
+    }
+  }
+
+
+  .current a {
+    background-color: @alpha-color;
+    text-decoration: none;
+    color:@link-current-color ;
+  }
+
+  .bar {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    margin:0px;
+    a{
+      display: block;
+      padding:0 10px; // up/down left/right //
+      font-size: 18px;
+      height: 28px;
+      line-height: 28px;
+    }
+  }
+}
+
+
+
+
+//responsive bar
+// applies to screens bigger than 768
+.barwrapper {
+  &.desktop {
+    @media @xs, @xxs {
+      display: none;
+    }
+    @media @sm, @md, @lg, @xl {
+      display: block;
+    }
+    .bar{
+      li{
+        float: left;
+      }
+    }
+  }
+}
+
+
+// applies to screens smaller than 769
+.barwrapper {
+  &.mobile {
+    height: 72px;
+    }
+    @media @xs, @xxs {
+      display: block;
+    }
+    @media @sm, @md, @lg, @xl {
+      display: none;
+    }
+    .bar{
+
+      li {
+        background-color: @background-color;
+        text-align: center;
+      }
+      .current a {
+        background-color: @beta-color;
+        text-decoration: none;
+        color: @background-color;
+      }
+    }
+  }
+}
